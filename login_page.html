@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>login</title>
+    </head>
+    <style>
+        body{
+            background-color:antiquewhite;
+            color:black;
+            align-items: center;
+            
+        }
+        button{
+            background-color:lightblue;
+            color:black;
+            border:1px solid black;
+            transition:0.5s;
+        }
+        button:hover{
+            background-color:lightgreen;
+            color:black;
+            transform:scale(1.2);
+        }
+        h1{
+            color:black;
+            align-items: center;
+        }
+        
+    </style>
+    <body>
+        <fieldset>
+            <h1><b>Login Page</b></h1>
+            <legend>Login</legend>
+            <form action="login.php" method="get">
+                <label for="username">Username:</label><br>
+                <input type="text" id="username" name="username"><br>
+                <label for="password">Password:</label><br>
+                <input type="password" id="password" name="password"><br><br>
+                <button type="button" onclick="login()">Login</button>
+                <p id="msg"></p>
+            </form>
+        </fieldset>
+        <script>
+            function login(){
+                var username = document.getElementById("username").value;
+                var password = document.getElementById("password").value;
+                if(username == "admin" && password == "0000"){
+                    document.getElementById("msg").innerHTML = "Login successful!";
+                }else{
+                    document.getElementById("msg").innerHTML = "Invalid username or password.";
+                }
+            }
+
+        </script>
+    </body>
