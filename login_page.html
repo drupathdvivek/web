@@ -41,14 +41,18 @@
         </fieldset>
         <script>
             function login(){
-                var username = document.getElementById("username").value;
-                var password = document.getElementById("password").value;
-                if(username == "admin" && password == "0000"){
-                    document.getElementById("msg").innerHTML = "Login successful!";
-                }else{
-                    document.getElementById("msg").innerHTML = "Invalid username or password.";
+                var username=document.getElementById("username").value;
+                var password=document.getElementById("password").value;
+                if(username=="admin" && password=="0000"){
+                    document.getElementById("msg").innerHTML="Login successful!";
+                }
+                else
+                {
+                    document.getElementById("msg").innerHTML="Invalid username or password.";
                 }
             }
 
         </script>
     </body>
+</html>
+    
